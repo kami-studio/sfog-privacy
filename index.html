@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sfog: Photo Cleaner — Privacy policy</title>
+<style>
+  body { font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 46rem; margin: 2rem auto; padding: 0 1rem; color: #1b1b1f; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: .2rem; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: .45rem .5rem; border-bottom: 1px solid #ddd; }
+  th { background: #f3f2f8; }
+  code { font-size: .85em; }
+  .muted { color: #555; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e4e1e6; background: #131316; }
+    th { background: #23232a; }
+    th, td { border-bottom-color: #3a3a42; }
+    .muted { color: #aaa; }
+    a { color: #b9c3ff; }
+  }
+</style>
+</head>
+<body>
+<h1>Sfog: Photo Cleaner — privacy policy</h1>
+<p class="muted">Effective 15 October 2026. Applies to the Android app <strong>Sfog: Photo Cleaner</strong>
+(<code>com.kamistudio.sfog</code>), by Kami Studio.</p>
+
+<h2>In short</h2>
+<ul>
+  <li>The app collects nothing and sends nothing. It has no account, no ads, no analytics, no crash reporting.</li>
+  <li>The release app does not have Android's Internet permission: it cannot connect to any server.</li>
+  <li>Your photos and videos are read, compared, compressed and moved to the trash <strong>on your phone only</strong>.</li>
+</ul>
+
+<h2>What the app keeps, on your phone</h2>
+<table>
+  <tr><th>What</th><th>Why</th><th>Where</th></tr>
+  <tr><td>Your marks (Pick, Compress, Reject) and frame choices</td><td>So a review survives closing the app</td><td>The app's private database</td></tr>
+  <tr><td>What each Apply did (Activity): file names, sizes, dates, results</td><td>So you can see and undo it (restore from the trash)</td><td>Same</td></tr>
+  <tr><td>Measurements of your photos (a small fingerprint per photo, to group similar ones)</td><td>Grouping similar shots</td><td>Same</td></tr>
+  <tr><td>Settings (theme, compression, folders, reminder)</td><td>Your choices</td><td>The app's private preferences</td></tr>
+</table>
+<p>Nothing here leaves the phone through the app. Uninstalling the app deletes all of it. If Android's own backup is
+on, Android may include the app's data in <strong>your</strong> Google account's device backup; Kami Studio never
+receives it.</p>
+
+<h2>Permissions, and why</h2>
+<table>
+  <tr><th>Permission</th><th>Why</th><th>When</th></tr>
+  <tr><td>Photos and videos (<code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>; <code>READ_EXTERNAL_STORAGE</code> on Android 12 and older; <code>READ_MEDIA_VISUAL_USER_SELECTED</code> for "selected photos only")</td><td>To show your library month by month: the app's whole purpose</td><td>Asked at first start</td></tr>
+  <tr><td>Photo location (<code>ACCESS_MEDIA_LOCATION</code>)</td><td>Without it Android hides a photo's GPS position from the app, and a compressed photo would lose it. The app copies it into the new file; it never reads it for itself</td><td>Asked with the above</td></tr>
+  <tr><td>Media management (<code>MANAGE_MEDIA</code>, optional)</td><td>If you grant it in Settings, Android stops asking you to confirm each move to the trash or each compression</td><td>Only if you turn it on</td></tr>
+  <tr><td>Notifications (<code>POST_NOTIFICATIONS</code>)</td><td>The progress of a long Apply, and the monthly reminder if you turn it on</td><td>Asked when you turn the reminder on or start a long Apply</td></tr>
+  <tr><td>Foreground service (<code>FOREGROUND_SERVICE</code>, <code>…_MEDIA_PROCESSING</code>, <code>…_DATA_SYNC</code>), <code>WAKE_LOCK</code></td><td>A long Apply (compressing videos) keeps running when you leave the app, with a notification you can stop it from</td><td>While an Apply runs</td></tr>
+  <tr><td><code>RECEIVE_BOOT_COMPLETED</code>, <code>ACCESS_NETWORK_STATE</code> (added by Android's WorkManager)</td><td>The monthly reminder is scheduled again after a restart; WorkManager reads the network state for jobs that need it (this app has none)</td><td>—</td></tr>
+</table>
+
+<h2>What you choose to send</h2>
+<p><strong>Share</strong> and <strong>Edit in another app</strong> hand the photos you picked to the app you pick
+(Android's share sheet). That app's own privacy policy applies to what it receives. Sfog sends nothing itself.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children and collects no data from anyone.</p>
+
+<h2>Changes</h2>
+<p>A change to this policy is published on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Kami Studio — <a href="mailto:eyalkamitchi1@gmail.com">eyalkamitchi1@gmail.com</a></p>
+</body>
+</html>
